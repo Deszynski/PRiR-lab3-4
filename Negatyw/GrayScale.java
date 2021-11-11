@@ -42,12 +42,12 @@ public class GrayScale extends Thread
 			width = image.getWidth();
 			height = image.getHeight();
 			
-			 //odczyt pixeli obrazu w dwóch pêtlach po kolumnach i wierszach
+			 //odczyt pixeli obrazu w dwÃ³ch pÃªtlach po kolumnach i wierszach
 			for(int i=1; i<height-1; i++)
 			{
 				for(int j=1; j<width-1; j++)
 				{
-					//odczyt sk³adowych koloru RGB
+					//odczyt skÂ³adowych koloru RGB
 					Color c = new Color(image.getRGB(j, i));
 					int red = (c.getRed());
 					int green = (c.getGreen());
@@ -67,7 +67,7 @@ public class GrayScale extends Thread
 			//zapis do pliku zmodyfikowanego obrazu
 			File output = new File("img_grayscale.jpg");
 			ImageIO.write(image, "jpg", output);
-			System.out.println("W¹tek id "+index+" ukonczyl prace.");
+			System.out.println("WÂ¹tek id "+index+" ukonczyl prace.");
 		} 
 		catch (Exception e) 
 		{
