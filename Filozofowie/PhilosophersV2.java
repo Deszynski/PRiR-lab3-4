@@ -17,7 +17,7 @@ public class PhilosophersV2 extends Thread
 		while(true) 
 		{
 			//myslenie
-			System.out.println("Mysle ¦ "+mojNum);
+			System.out.println("Mysle Â¦ "+mojNum);
 			try 
 			{
 				Thread.sleep((long)(5000*Math.random()));
