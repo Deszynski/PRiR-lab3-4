@@ -13,6 +13,6 @@ public class Negatyw
 		}	
 		
 		long endTime = System.currentTimeMillis();
-		System.out.println("Obliczenia zakoñczone w czasie " + (endTime - startTime) + " millisekund");
+		System.out.println("Obliczenia zakoÃ±czone w czasie " + (endTime - startTime) + " millisekund");
 	}
 }
