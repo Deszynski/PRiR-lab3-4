@@ -5,7 +5,7 @@ public class Philosophers
 	public static void main(String[] args) 
 	{
 		Scanner s = new Scanner(System.in);
-		System.out.println("Podaj liczbê filozofów.");
+		System.out.println("Podaj liczbÃª filozofÃ³w.");
 		int philosophers = s.nextInt();
 		System.out.println(System.lineSeparator()+"Podaj nr metody 1,2,3.");
 		int method = s.nextInt();
@@ -22,7 +22,7 @@ public class Philosophers
 				PhilosophersV3.process(philosophers);
 				break;
 			default:
-				System.out.println(System.lineSeparator()+"B³¹d. Wybierz 1,2 lub 3.");
+				System.out.println(System.lineSeparator()+"BÂ³Â¹d. Wybierz 1,2 lub 3.");
 				System.exit(1);
 		}
 	}
