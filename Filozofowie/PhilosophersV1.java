@@ -17,7 +17,7 @@ public class PhilosophersV1 extends Thread
 		while(true)
 		{
 			// myslenie
-			System.out.println("Mysle ¦ " + mojNum);
+			System.out.println("Mysle Åš " + mojNum);
 			
 			try 
 			{
