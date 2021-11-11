@@ -11,13 +11,13 @@ public class ParallelJulie extends Thread
 	static int[][] set = new int[N][N];
 	
 	int index;	
-	//konstruktor, który ustawie numeracje w¹tków	
+	//konstruktor, ktÃ³ry ustawie numeracje wÄ…tkÃ³w	
 	public ParallelJulie(int index) 
 	{
 		this.index = index;
 	}
 	
-	//procedura wykonywana przez ka¿dy z 4 w¹tków sprawdzaj¹ca czy dany punkt nale¿y do zbioru Julii
+	//procedura wykonywana przez kaÅ¼dy z 4 wÄ…tkÃ³w sprawdzajÄ…ca czy dany punkt naleÅ¼y do zbioru Julii
 	@Override
 	public void run() 
 	{
@@ -47,7 +47,7 @@ public class ParallelJulie extends Thread
 		{
 			for (int j = 0; j < N; j++) 
 			{
-				//przeskalowanie punktów do uk³adu wspolrzednych kartezjanskich
+				//przeskalowanie punktÃ³w do ukÅ‚adu wspolrzednych kartezjanskich
 				double cr = -0.25;//-0.2;
                 double ci = 0.76;//0.65;
                 double zr = i * (1.25 - -1.25) / N + -1.25;
@@ -73,10 +73,10 @@ public class ParallelJulie extends Thread
 	{
 		ParallelJulie thread;
 		
-		//ustawienie stopera licz¹cego czas obliczeñ
+		//ustawienie stopera liczÄ…cego czas obliczeÅ„
 		long startTime = System.currentTimeMillis();
 		
-		//ustawienie 4 w¹tków generuj¹cych fraktal w 4 æwiartkach
+		//ustawienie 4 wÄ…tkÃ³w generujÄ…cych fraktal w 4 Ä‡wiartkach
 		for(int i=0; i<4; i++)
 		{
 			thread = new ParallelJulie(i);
@@ -84,11 +84,11 @@ public class ParallelJulie extends Thread
 			thread.join();
 		}
 		
-		//zakoñczenie dzia³ania stopera i wyœwietlenie czasu generowania fraktala
+		//zakoÅ„czenie dziaÅ‚ania stopera i wyÅ›wietlenie czasu generowania fraktala
 		long endTime = System.currentTimeMillis();
-		System.out.println("Obliczenia zakoñczone w czasie " + (endTime - startTime) + " millisekund");
+		System.out.println("Obliczenia zakoÅ„czone w czasie " + (endTime - startTime) + " millisekund");
 		
-		//ustawienie pliku graficznego, w którym zostanie wygenerowany fraktal
+		//ustawienie pliku graficznego, w ktÃ³rym zostanie wygenerowany fraktal
 		BufferedImage img = new BufferedImage(N, N, BufferedImage.TYPE_INT_ARGB);
 		
 		//wstawianie pixeli do pliku graficznego
@@ -100,12 +100,12 @@ public class ParallelJulie extends Thread
 				float level;
 				if (k < CUTOFF) 
 				{
-					//pixel o wspolrzednych i,j nale¿y do zbioru Julii
+					//pixel o wspolrzednych i,j naleÅ¼y do zbioru Julii
 					level = (float) k / CUTOFF;
 				} 
 				else 
 				{
-					//pixel o wspolrzednych i,j nie nale¿y do zbioru Julii
+					//pixel o wspolrzednych i,j nie naleÅ¼y do zbioru Julii
 					level = 0;
 				}
 				
