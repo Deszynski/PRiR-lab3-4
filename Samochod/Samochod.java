@@ -15,7 +15,7 @@ public class Samochod extends Thread
 	
 	public void tankowanie (int _paliwo)
 	{
-		System.out.println("Samochod "+nrRej+" zatankowa≥ "+_paliwo+" paliwa");
+		System.out.println("Samochod "+nrRej+" zatankowa≈Ç "+_paliwo+" paliwa");
 		paliwo+=_paliwo;
 		run();
 	}
@@ -37,7 +37,7 @@ public class Samochod extends Thread
 			}
 			else if(paliwo <=0)
 			{
-				System.out.println("Samochod "+nrRej+" zatrzyma≥ sie z powodu braku paliwa");
+				System.out.println("Samochod "+nrRej+" zatrzyma≈Ç sie z powodu braku paliwa");
 				stop();			
 			}
 
