@@ -3,9 +3,9 @@ import java.util.Scanner;
 
 public class MonteCarlo extends Thread
 {
-	static int iterations;
+    static int iterations;
     static double radius;
-	double x_start, y_start, x_end, y_end;
+    double x_start, y_start, x_end, y_end;
     double result;
     int in;  
     Random r;
@@ -23,7 +23,7 @@ public class MonteCarlo extends Thread
     }
 
     @Override
-	public void run() 
+    public void run() 
     { 
         for (int i = 0; i < this.iterations/4; i++) 
         {
